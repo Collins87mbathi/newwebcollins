@@ -1,0 +1,414 @@
+*{
+  margin: 0px;
+  padding: 0px; 
+  box-sizing: border-box;
+
+}
+
+nav {
+    
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+} 
+.logo {
+    color: aliceblue;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    
+    
+}
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a {
+    color: aliceblue;
+    text-decoration: none;
+    letter-spacing:1px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.perez{
+    display: none;
+    cursor: pointer;
+}
+.perez div{
+    width: 25px;
+    height: 3px;
+    background-color: aliceblue;
+    margin: 5px;
+    transition:all 0.3s ease ;
+
+}
+@media screen and (max-width:1024px) {
+    .nav-links{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color:black;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        transform:translateX(100%) ;
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .perez{
+        display: block;
+    }
+    .nav-active{
+        transform: translateX(0%);
+    }
+    @keyframes navLinkFade {
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+
+}
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+#Home{
+    height: 100vh;
+    min-height: 500px;
+    background: url(Electrical.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero-section{
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    
+    padding-top: 15rem;
+    
+}
+.hero-section p{
+    margin: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.hero-section h3{
+    margin: 10px;
+    font-weight: bold;
+    color: #0093E9;
+}
+
+.btn{
+    padding: 0.7rem;
+ border: 1px solid black;
+ background-color: black;
+ color: aliceblue;
+ font-size: 1.5rem;
+ border-radius: 0.7rem;
+ cursor: pointer;
+
+}
+
+#About{
+ 
+min-height: 500px;
+background: black;
+
+
+font-family: 'Roboto Condensed', sans-serif ;
+}
+
+.text{
+text-align: center;
+padding: 20px;
+font-size: 1.4rem;
+}
+.text h4{
+    color:#0093E9 ;
+}
+.text h2{
+    color: aliceblue;
+}
+.about{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    
+
+
+}
+
+.card{
+    perspective: 150rem;
+    position: relative;
+    height: 40rem;
+    max-width: 400px;
+    margin: 2rem;
+    box-shadow: none;
+    background: none;
+    
+}
+
+.card-side{
+    height: 30rem;
+    border-radius: 15px;
+    transition: all 0.8s ease;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    padding: 2rem;
+    color: aliceblue;
+
+}
+
+.card-side .back{
+    transform: rotateY(-180deg);
+    background-color:#4158D0;
+    background-image: linear-gradient(43deg,#4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+}
+
+.card-side.front {
+    background-color:aliceblue;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+}
+.card:hover .card-side.front{
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-side.back{
+    transform: rotateY(0deg);
+}
+
+.card-side.front p {
+    text-align: center;
+    padding-top: 10rem;
+    font-size: 1.1rem;
+    
+}
+.card-side.back p {
+    color: aliceblue;
+}
+
+.click{
+    padding: 0.5rem;
+    margin: 0.5rem;
+ border: 1px solid black;
+ background-color:transparent;
+ color:aliceblue ;
+ font-size: 1rem;
+ border-radius: 1.5rem;
+ cursor: pointer;  
+}
+@media screen and (max-width:768px) {
+    .about{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-left: 50px;
+    } 
+
+    .card{
+        perspective: 150rem;
+        position: relative;
+        height: 40rem;
+        max-width: 500px;
+        margin: 0.3rem;
+        box-shadow: none;
+        background: none;
+    }
+}
+
+#services{
+    height: 100vh;
+    min-height: 500px;
+    
+    
+}
+.title{
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+
+    margin-bottom: 1rem;
+    color:  #0093E9; ;
+    
+}
+
+.images{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    
+}
+.images > div {
+    cursor: pointer;
+    height: 210px;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  transition: all 0.5s ease-in;
+}
+
+.images > div:hover {
+    opacity: 0.7;
+    transform: scale(0.98);
+  }
+
+.img1 {
+    background: url('image1.jpg');
+    color: #0093E9;
+  }
+
+
+  .img2 {
+    background: url('image2.jpg');
+    color: #0093E9;
+  }
+
+  .img3 {
+    background: url('image3.jpg');
+    color: #0093E9;
+  }
+
+  .img4 {
+    background: url('image4.jpg');
+    color: #0093E9;
+  }
+
+  .img5 {
+    background: url('image5.jpg');
+    color: #0093E9;
+  }
+
+  .img6 {
+    background: url('image6.jpg');
+    color: #0093E9;
+
+  }
+
+  .img7 {
+    background: url('image7.jpg');
+    color: #0093E9;
+  }
+
+  .img8 {
+    background: url('image8.jpg');
+    color: #0093E9;
+  }
+
+  .img9 {
+    background: url('image9.jpg');
+    color: #0093E9;
+  }
+
+  #pages{
+    background: url(bg.png) no-repeat center;
+    background-size: cover;
+    padding: 40px 0;
+  }
+  #pages h1{
+    text-align: center;
+    color: #ddd;
+  }
+  .border{
+    width: 100px;
+    height: 10px;
+    background: #0093E9;
+    margin: 40px auto;
+  }
+  
+  .contact-form{
+    max-width: 600px;
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden;
+  }
+  
+  .contact-form-text{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 0;
+    background: #111;
+    padding: 20px 40px;
+    outline: none;
+    color: #ddd;
+    transition: 0.5s;
+  }
+  .contact-form-text:focus{
+    box-shadow: 0 0 10px 4px  #0093E9;
+  }
+  textarea.contact-form-text{
+    resize: none;
+    height: 120px;
+  }
+  .contact-form-btn{
+    float: right;
+    border: 0;
+    background:  #0093E9;
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .contact-form-btn:hover{
+    background: #2980b9;
+  }
+
+  footer {
+    background: black;
+    padding: 5rem 1rem;
+  }
+  footer p {
+    color: aliceblue;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    margin-bottom: 0;
+  }
